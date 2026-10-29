@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ឈប់! គិត មុនចុច – សុវត្ថិភាពអនឡាញ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff4c2;--surface:#fffdf3;--ink:#1b2a41;--muted:#505b6b;--yellow:#ffd54a;--orange:#f9b233;--blue:#1f56b5;--blue-bg:#dbe7fb;--green:#2f7d3a;--green-bg:#d9f1dc;--red:#c3281d;--red-bg:#fbdcd8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17140a;--surface:#241f10;--ink:#f6efd0;--muted:#c2b98f;--blue:#8db3f5;--blue-bg:#16264a;--green:#7fd18a;--green-bg:#17351b;--red:#ff9a90;--red-bg:#43201c}}
+:root[data-theme="dark"]{--bg:#17140a;--surface:#241f10;--ink:#f6efd0;--muted:#c2b98f;--blue:#8db3f5;--blue-bg:#16264a;--green:#7fd18a;--green-bg:#17351b;--red:#ff9a90;--red-bg:#43201c}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.85 "Kantumruy Pro","Noto Sans Khmer","Khmer OS",system-ui,sans-serif}
+h1,h2,h3{line-height:1.5;margin:0 0 .4em;font-weight:700}
+h1{font-size:clamp(2.2rem,7vw,3.6rem)}h2{font-size:clamp(1.5rem,4vw,2.1rem)}h3{font-size:1.2rem}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.wrap{max-width:940px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 0}
+nav b{font-size:1.2rem}nav div{display:flex;gap:8px;flex-wrap:wrap}
+nav a{color:inherit;text-decoration:none;font-weight:600;padding:4px 16px;border-radius:99px;border:2px solid var(--ink)}
+nav a:hover{background:var(--yellow);color:#1b2a41}
+.hero{background:var(--yellow);color:#1b2a41;border-bottom:4px solid #1b2a41}
+.hero nav a{border-color:#1b2a41}
+.hero .wrap{padding-bottom:48px}
+.bubble{background:#fff;color:#1b2a41;border:3px solid #1b2a41;border-radius:32px;padding:20px 26px;margin-top:10px;max-width:640px;font-size:1.2rem;font-weight:600}
+a.cta{display:inline-block;margin-top:18px;background:#1b2a41;color:#fff;font-weight:700;text-decoration:none;padding:12px 28px;border-radius:99px}
+section{padding:54px 0}.alt{background:var(--surface);border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.muted{color:var(--muted)}
+.pill{display:inline-block;background:var(--yellow);color:#1b2a41;font-weight:700;padding:2px 20px;border-radius:99px;margin:0 0 8px}
+.pill.b{background:var(--blue);color:#fff}
+@media (prefers-color-scheme:dark){.pill.b{color:#0b1530}}
+.tabs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:18px}
+.tab{font:inherit;text-align:left;cursor:pointer;background:var(--surface);color:var(--ink);border:3px solid var(--ink);border-radius:24px;padding:18px 22px;font-weight:700;font-size:1.15rem}
+.tab small{display:block;font-weight:400;color:var(--muted);font-size:.95rem}
+.tab:hover,.tab[aria-pressed="true"]{background:var(--yellow);color:#1b2a41}
+.tab[aria-pressed="true"] small{color:#1b2a41}
+.tab.x:hover,.tab.x[aria-pressed="true"]{background:var(--blue);color:#fff}
+.tab.x[aria-pressed="true"] small{color:#fff}
+.box{background:var(--surface);border:3px solid var(--ink);border-radius:28px;padding:22px 26px;margin-top:18px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:18px}
+.cols>div{border:3px solid var(--ink);border-radius:22px;padding:14px 20px;background:var(--bg)}
+ul.l{margin:.3em 0;padding-left:0;list-style:none}ul.l li{margin:.3em 0;padding-left:1.6em;position:relative}
+ul.l li::before{content:"•";position:absolute;left:.4em}
+ul.l.no li::before{content:"✗";color:var(--red);font-weight:700;left:0}
+ul.l.yes li::before{content:"✓";color:var(--green);font-weight:700;left:0}
+button{font:inherit;font-weight:600;cursor:pointer;border-radius:16px;border:3px solid var(--ink);background:var(--surface);color:var(--ink);padding:10px 20px}
+button.primary{background:var(--ink);color:var(--surface);margin-top:16px}
+.pickc{display:block;width:100%;text-align:left;margin-top:10px}
+.pickc:hover{background:var(--yellow);color:#1b2a41}
+.progress{display:flex;justify-content:space-between;color:var(--muted);font-size:.95rem}
+.bar{height:12px;border:2px solid var(--ink);border-radius:8px;overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;background:var(--orange);transition:width .3s}
+.q{font-size:1.3rem;margin-top:18px;text-align:center}
+.ab{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+@media (max-width:560px){.ab{grid-template-columns:1fr}}
+.opt{display:flex;gap:14px;align-items:center;text-align:left;padding:16px 18px;border-radius:22px;background:var(--orange);color:#1b2a41}
+.opt b{font-size:1.8rem;line-height:1}
+.opt:hover:not([disabled]){background:var(--yellow)}
+.opt.ok{background:var(--green-bg);border-color:var(--green);color:var(--ink)}
+.opt.no{background:var(--red-bg);border-color:var(--red);color:var(--ink)}
+.opt[disabled]{cursor:default}
+.opt[disabled]:not(.ok):not(.no){opacity:.7}
+.fb{display:none;margin-top:14px;padding:12px 18px;border-radius:18px;border:3px solid var(--ink)}
+.fb.ok{display:block;background:var(--green-bg)}.fb.no{display:block;background:var(--red-bg)}
+.big{font-size:2.8rem;font-weight:700}
+.rev{padding-left:24px}.rev li{margin-bottom:18px}.rev small{display:block;color:var(--muted)}
+.good{color:var(--green);font-weight:700}.bad{color:var(--red);font-weight:700}
+.key>div{border:3px solid var(--ink);border-radius:20px;padding:12px 18px;margin-bottom:12px;background:var(--bg)}
+.key p{margin:.2em 0}
+ol.steps{padding-left:24px;max-width:64ch}ol.steps li{margin-bottom:10px}
+.calm{background:var(--green-bg);border:3px solid var(--green);border-radius:20px;padding:14px 20px;margin-top:14px;font-weight:600}
+footer{padding:26px 0 44px;color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <nav aria-label="មឺនុយ"><b>SafeClick</b><div><a href="#topics">និយមន័យ</a><a href="#quizsec">សំណួរ</a><a href="#key">ចម្លើយ</a><a href="#help">ជំនួយ</a></div></nav>
+    <h1>ឈប់! គិត មុនចុច 💡</h1>
+    <div class="bubble">តើអ្នកដឹងទេ ថាការបោកប្រាស់ និងការរំលោភបំពានផ្លូវភេទតាមអនឡាញ មើលទៅដូចអ្វី? សិក្សានិយមន័យ រួចឆ្លើយសំណួរ។</div>
+    <a class="cta" href="#topics">ចាប់ផ្តើម</a>
+  </div>
+</header>
+
+<main>
+<section id="topics">
+  <div class="wrap">
+    <h2>ចុចលើប្រធានបទ ដើម្បីមើលនិយមន័យ</h2>
+    <div class="tabs" role="group" aria-label="ប្រធានបទ">
+      <button type="button" class="tab" id="t0" aria-pressed="false" aria-controls="tp">ការបោកប្រាស់តាមអ៊ីនធឺណិត<small>ចុចដើម្បីមើលនិយមន័យ</small></button>
+      <button type="button" class="tab x" id="t1" aria-pressed="false" aria-controls="tp">ការរំលោភបំពានផ្លូវភេទតាមអ៊ីនធឺណិត<small>ចុចដើម្បីមើលនិយមន័យ</small></button>
+    </div>
+    <div id="tp" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="quizsec" class="alt">
+  <div class="wrap">
+    <h2>សំណួរ៖ ចម្លើយ A ឬ B</h2>
+    <div class="box" id="quiz" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="key">
+  <div class="wrap">
+    <h2>ចម្លើយទាំងអស់</h2>
+    <p class="muted">សម្រាប់គ្រូ ឬអ្នកធ្វើបទបង្ហាញ។ សូមលាក់រហូតដល់អ្នកស្តាប់ធ្វើសំណួរចប់។</p>
+    <button type="button" id="keybtn" aria-expanded="false" aria-controls="keylist">បង្ហាញចម្លើយ</button>
+    <div class="key" id="keylist" hidden style="margin-top:18px"></div>
+  </div>
+</section>
+
+<section id="help" class="alt">
+  <div class="wrap">
+    <h2>ប្រសិនបើអ្នកជួបបញ្ហា</h2>
+    <ol class="steps">
+      <li><b>ឈប់ឆ្លើយតប</b> ហើយកុំបង់លុយ ឬផ្ញើអ្វីបន្ថែម។</li>
+      <li><b>រក្សាទុកភស្តុតាង</b> (ថតអេក្រង់) រួចរារាំងគណនីនោះ។</li>
+      <li><b>ប្រាប់មនុស្សធំ</b> ដែលអ្នកទុកចិត្ត ដូចជាឪពុកម្តាយ គ្រូ ឬមិត្តភក្តិ។</li>
+      <li>ករណីបោកប្រាស់៖ <b>ទូរស័ព្ទទៅធនាគារភ្លាម</b> ហើយប្តូរព័ត៌មានចូលគណនី។</li>
+    </ol>
+    <div class="box"><b>ទទួលជំនួយ៖</b> Child Helpline Cambodia ទូរស័ព្ទ <b>១២៨០</b> (ឥតគិតថ្លៃ ២៤ម៉ោង) ឬប៉ូលីសលេខ <b>១១៧</b>។ លេខទាំងនេះអាចផ្លាស់ប្តូរ សូមផ្ទៀងផ្ទាត់ម្តងទៀត។</div>
+    <div class="calm">នេះមិនមែនជាកំហុសរបស់អ្នកទេ។ ការសុំជំនួយគឺជាជំហានដ៏ត្រឹមត្រូវ។</div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">SafeClick ជាគម្រោងសិក្សា។ ដំបូន្មានទាំងនេះជាទូទៅ មិនអាចគ្របដណ្តប់គ្រប់ករណីបានទេ។</div></footer>
+
+<script>
+(function(){
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+  function btn(label,cls,fn){var b=el('button',cls,label);b.type='button';b.addEventListener('click',fn);return b}
+  function list(items,cls){var u=el('ul','l '+(cls||''));items.forEach(function(t){u.appendChild(el('li',null,t))});return u}
+
+  // Topics with definitions
+  var T=[
+    {n:'ការបោកប្រាស់តាមអ៊ីនធឺណិត',d:'ការប្រើសារ គេហទំព័រ ឬគណនីក្លែងក្លាយ ដើម្បីបោកបញ្ឆោតយកលុយ ឬព័ត៌មានផ្ទាល់ខ្លួនរបស់អ្នក។',
+     h:'នៅពេលមនុស្សប្រើទូរស័ព្ទ ធនាគារ និងបណ្តាញសង្គមកាន់តែច្រើន ឧក្រិដ្ឋជនក៏ចម្លងឈ្មោះធនាគារ ក្រុមហ៊ុន ឬមិត្តភក្តិ ដើម្បីបង្កើតទំនុកចិត្តក្លែងក្លាយ។ ពួកគេតែងធ្វើឲ្យអ្នកប្រញាប់ ឬសន្យាផលចំណេញខ្ពស់។',
+     sg:['ទាមទារឲ្យធ្វើភ្លាមៗ','សុំកូដ OTP ឬបង់លុយជាមុន','សន្យាចំណេញធានា ឬរង្វាន់ដែលមិនបានចូលរួម','តំណ ឬលេខទូរស័ព្ទចម្លែក'],
+     fa:['ធនាគារពិតមិនដែលសុំកូដ OTP ទេ','ប៉ូលីសមិនដែលឲ្យផ្ទេរលុយទៅ «គណនីសុវត្ថិភាព»','ការងារ ឬការវិនិយោគដែលធានាចំណេញធំ ច្រើនតែជាអន្ទាក់'],
+     no:['កុំចុចតំណដែលមិនស្គាល់','កុំចែករំលែកកូដ OTP ឬព័ត៌មានកាត','កុំបង់លុយជាមុនទៅអ្នកមិនស្គាល់'],
+     yes:['ពិនិត្យតាមកម្មវិធី ឬគេហទំព័រផ្លូវការ','សួរមនុស្សដែលអ្នកទុកចិត្តមុនបង់លុយ','រាយការណ៍ និងរារាំងគណនីបោកប្រាស់']},
+    {n:'ការរំលោភបំពានផ្លូវភេទតាមអ៊ីនធឺណិត',d:'ការបញ្ចុះបញ្ចូល បង្ខំ ឬគំរាមអ្នក ឲ្យផ្ញើរូបភាព វីដេអូ ឬនិយាយរឿងផ្លូវភេទតាមអនឡាញ រួមទាំងការផ្សាយរូបភាពឯកជនដោយគ្មានការអនុញ្ញាត និងការគំរាមយកលុយ។',
+     h:'អ្នកប្រព្រឹត្តច្រើនបង្កើតមិត្តភាព ឬស្នេហាក្លែងក្លាយ ផ្តល់អំណោយតិចតួច ហើយបន្តិចម្តងៗសុំរូបភាព ឬសុំឲ្យរក្សាការសម្ងាត់។ កុមារ និងយុវវ័យងាយរងគ្រោះ ប៉ុន្តែនរណាក៏អាចជួបបាន។',
+     sg:['សុំរូបភាពឯកជន','សុំឲ្យលាក់ពីមនុស្សធំដែលអ្នកទុកចិត្ត','ផ្តល់អំណោយ ឬលុយ ដើម្បីទទួលបានអ្វីមួយ','គំរាមផ្សាយ ឬសុំលុយបន្ថែម'],
+     fa:['អ្នកមានសិទ្ធិបដិសេធជានិច្ច','នេះមិនមែនជាកំហុសរបស់ជនរងគ្រោះទេ','រូបភាពដែលបានផ្ញើហើយ មិនអាចគ្រប់គ្រងបានទៀតទេ'],
+     no:['កុំបង់លុយ ឬផ្ញើរូបភាពបន្ថែម','កុំចូលជួបម្នាក់ឯង','កុំបញ្ជូនបន្តរូបភាពរបស់អ្នកដទៃ'],
+     yes:['រក្សាភស្តុតាង (ថតអេក្រង់) ហើយរារាំងគណនី','ប្រាប់មនុស្សធំដែលអ្នកទុកចិត្ត','ទូរស័ព្ទ Child Helpline Cambodia ១២៨០ ឬប៉ូលីស ១១៧']}
+  ];
+  var tp=document.getElementById('tp'),tabs=[document.getElementById('t0'),document.getElementById('t1')],cur=-1;
+  function showTopic(k){
+    if(cur===k){cur=-1}else cur=k;
+    tabs.forEach(function(b,n){b.setAttribute('aria-pressed',n===cur)});
+    tp.textContent='';if(cur<0)return;
+    var t=T[cur],b=cur===1?' b':'',box=el('div','box');
+    box.appendChild(el('span','pill'+b,'តើអ្វីជា'+t.n+'?'));box.appendChild(el('p',null,t.d));
+    box.appendChild(el('span','pill'+b,'ប្រវត្តិ និងរបៀបកើតឡើង'));box.appendChild(el('p',null,t.h));
+    var c1=el('div','cols'),a=el('div'),f=el('div');
+    a.appendChild(el('span','pill'+b,'ការស្គាល់សញ្ញា'));a.appendChild(list(t.sg));
+    f.appendChild(el('span','pill'+b,'ការពិតសំខាន់ៗ'));f.appendChild(list(t.fa));
+    c1.appendChild(a);c1.appendChild(f);box.appendChild(c1);
+    var c2=el('div','cols'),n=el('div'),y=el('div');
+    n.appendChild(el('b',null,'អ្វីដែលមិនគួរធ្វើ'));n.appendChild(list(t.no,'no'));
+    y.appendChild(el('b',null,'អ្វីដែលគួរធ្វើ'));y.appendChild(list(t.yes,'yes'));
+    c2.appendChild(n);c2.appendChild(y);box.appendChild(c2);
+    tp.appendChild(box);
+  }
+  tabs.forEach(function(b,n){b.addEventListener('click',function(){showTopic(n)})});
+
+  // A/B quiz
+  var Q=[
+    {c:'s',q:'សារពី «ធនាគារ» សុំឲ្យអ្នកផ្ញើកូដ OTP ដែលទើបទទួលបាន។ តើអ្នកនឹងធ្វើដូចម្តេច?',o:['ផ្ញើកូដ','មិនផ្ញើកូដ ហើយទូរស័ព្ទទៅធនាគារតាមលេខផ្លូវការ'],a:1,e:'កូដ OTP គឺសម្រាប់តែអ្នកប៉ុណ្ណោះ។ ធនាគារពិតមិនដែលសុំវាទេ។'},
+    {c:'s',q:'មនុស្សចម្លែកផ្តល់ការងារនៅបរទេស ប្រាក់ខែខ្ពស់ ហើយសុំរូបថតលិខិតឆ្លងដែនជាមុន។ តើអ្នកនឹងធ្វើដូចម្តេច?',o:['ពិនិត្យក្រុមហ៊ុនជាមុន ហើយមិនផ្ញើឯកសារ','ផ្ញើឯកសារភ្លាម ព្រោះខ្លាចបាត់ឱកាស'],a:0,e:'ការងារល្អហួសហេតុដែលសុំឯកសារ ឬលុយ គឺជាអន្ទាក់។ ខ្លះនាំទៅការជួញដូរមនុស្ស ដូច្នេះត្រូវផ្ទៀងផ្ទាត់ជាមុន។'},
+    {c:'s',q:'សារប្រាប់ថាអ្នកឈ្នះទូរស័ព្ទ ហើយត្រូវបង់ថ្លៃដឹក ៥ ដុល្លារតាមតំណ។ តើអ្នកនឹងធ្វើដូចម្តេច?',o:['បង់ ៥ ដុល្លារ ដើម្បីទទួលរង្វាន់','មិនបង់ ហើយលុបសារ'],a:1,e:'អ្នកមិនអាចឈ្នះរង្វាន់ដែលមិនបានចូលរួមទេ។ ទំព័របង់ថ្លៃនោះបង្កើតឡើងដើម្បីលួចព័ត៌មានកាតរបស់អ្នក។'},
+    {c:'s',q:'អ្នកទូរស័ព្ទអះអាងថាជាប៉ូលីស ហើយប្រាប់ឲ្យផ្ទេរលុយទៅ «គណនីសុវត្ថិភាព»។ តើអ្នកនឹងធ្វើដូចម្តេច?',o:['ដាក់ទូរស័ព្ទ ហើយហៅប៉ូលីសតាមលេខផ្លូវការ','ផ្ទេរលុយតាមការប្រាប់'],a:0,e:'ប៉ូលីស និងធនាគារពិតមិនដែលឲ្យផ្ទេរលុយទៅ «គណនីសុវត្ថិភាព» ទេ។'},
+    {c:'s',q:'មានសារចែកថា Facebook ទាមទារឲ្យដាក់រូបអត្តសញ្ញាណប័ណ្ណជារូប Profile បើមិនដូច្នេះគណនីនឹងត្រូវបិទ។ តើអ្នកនឹងធ្វើដូចម្តេច?',o:['ដាក់អត្តសញ្ញាណប័ណ្ណជារូប Profile','មិនធ្វើតាម ហើយពិនិត្យព័ត៌មានពីប្រភពផ្លូវការរបស់ Facebook'],a:1,e:'នេះជាព័ត៌មានក្លែងក្លាយ។ ការដាក់អត្តសញ្ញាណប័ណ្ណជាសាធារណៈ ធ្វើឲ្យអ្នកប្រថុយនឹងការបោកប្រាស់ និងការលួចអត្តសញ្ញាណ។'},
+    {c:'x',q:'ប្រសិនបើមាននរណាម្នាក់ស្នើសុំឲ្យអ្នកផ្ញើរូបភាពឯកជន តើអ្នកនឹងឆ្លើយដូចម្តេច?',o:['ផ្ញើ','មិនផ្ញើ រារាំងគណនី ហើយប្រាប់មនុស្សធំដែលអ្នកទុកចិត្ត'],a:1,e:'អ្នកមានសិទ្ធិបដិសេធជានិច្ច។ រូបភាពដែលបានផ្ញើហើយ មិនអាចគ្រប់គ្រងបានទៀតទេ ទោះគេសន្យាក៏ដោយ។'},
+    {c:'x',q:'បន្ទាប់ពីផ្ញើរូបភាព មានអ្នកគំរាមផ្សាយ បើអ្នកមិនបង់លុយ។ តើអ្នកនឹងធ្វើដូចម្តេច?',o:['មិនបង់ រក្សាភស្តុតាង រារាំងគណនី ហើយទូរស័ព្ទ ១២៨០ ឬប្រាប់មនុស្សធំ','បង់លុយ ដើម្បីឲ្យគេឈប់'],a:0,e:'ការបង់លុយធ្វើឲ្យការគំរាមកាន់តែខ្លាំង។ នេះមិនមែនជាកំហុសរបស់អ្នកទេ ហើយមានអ្នកជួយបាន។'},
+    {c:'x',q:'មិត្តអនឡាញផ្តល់អំណោយ ហើយសុំឲ្យអ្នករក្សាមិត្តភាពជាការសម្ងាត់ពីឪពុកម្តាយ។ តើអ្នកនឹងធ្វើដូចម្តេច?',o:['រក្សាសម្ងាត់តាមការសុំ','ប្រាប់មនុស្សធំដែលអ្នកទុកចិត្ត'],a:1,e:'អំណោយ និងការសម្ងាត់ជាវិធីធម្មតារបស់អ្នកបង្កើតទំនុកចិត្តដើម្បីបំពាន។ មនុស្សល្អមិនសុំឲ្យអ្នកលាក់ពីអ្នកការពារអ្នកទេ។'},
+    {c:'x',q:'រូបភាពឯកជនរបស់មិត្តម្នាក់ត្រូវបានផ្សាយក្នុងក្រុមជជែក។ តើអ្នកនឹងធ្វើដូចម្តេច?',o:['មិនបញ្ជូនបន្ត រាយការណ៍ ហើយគាំទ្រមិត្ត','បញ្ជូនបន្ត ព្រោះគ្រប់គ្នាមើលហើយ'],a:0,e:'ការបញ្ជូនបន្តធ្វើឲ្យគេឈឺចាប់ថែមទៀត ហើយអាចជាអំពើខុសច្បាប់។ ការគាំទ្រ និងរាយការណ៍ជួយបាន។'},
+    {c:'x',q:'មិត្តអនឡាញដែលមិនធ្លាប់ជួប ចង់ជួបអ្នកតែម្នាក់ឯងនៅកន្លែងស្ងាត់ ហើយកុំប្រាប់នរណា។ តើអ្នកនឹងធ្វើដូចម្តេច?',o:['ទៅជួប','មិនទៅ ហើយប្រាប់មនុស្សធំ'],a:1,e:'ការជួបម្នាក់ឯង និងការសម្ងាត់គឺជាគ្រោះថ្នាក់។ ត្រូវប្រាប់មនុស្សធំជានិច្ច។'}
+  ];
+  var CAT={s:'ការបោកប្រាស់',x:'ផ្លូវភេទ'},LT=['A','B'];
+  var box=document.getElementById('quiz'),L=[],i=0,score=0,picks=[],scoreEl;
+  function begin(cat){L=Q.filter(function(q){return !cat||q.c===cat});i=0;score=0;picks=[];ask()}
+  function start(){
+    box.textContent='';
+    box.appendChild(el('h3',null,'ជ្រើសរើសប្រធានបទ'));
+    box.appendChild(el('p','muted','មានចម្លើយពីរ៖ A ឬ B។ បន្ទាប់ពីឆ្លើយ អ្នកនឹងឃើញចម្លើយត្រឹមត្រូវ និងមូលហេតុ។'));
+    box.appendChild(btn('ទាំងអស់ (១០ សំណួរ)','pickc',function(){begin('')}));
+    box.appendChild(btn('ការបោកប្រាស់តាមអ៊ីនធឺណិត (៥ សំណួរ)','pickc',function(){begin('s')}));
+    box.appendChild(btn('ការរំលោភបំពានផ្លូវភេទតាមអ៊ីនធឺណិត (៥ សំណួរ)','pickc',function(){begin('x')}));
+  }
+  function ask(){
+    var q=L[i];box.textContent='';
+    var top=el('div','progress');top.appendChild(el('span',null,'សំណួរទី '+(i+1)+' នៃ '+L.length));scoreEl=el('span',null,'ពិន្ទុ៖ '+score);top.appendChild(scoreEl);
+    var bar=el('div','bar'),fill=el('i');fill.style.width=(i/L.length*100)+'%';bar.appendChild(fill);
+    var opts=el('div','ab'),fb=el('div','fb');
+    var nx=btn(i<L.length-1?'សំណួរបន្ទាប់':'មើលលទ្ធផល','primary',function(){i++;if(i<L.length)ask();else end()});nx.hidden=true;
+    q.o.forEach(function(t,n){
+      var b=btn('','opt',function(){pick(n,opts,fb,nx)});b.appendChild(el('b',null,LT[n]+'.'));b.appendChild(el('span',null,t));opts.appendChild(b);
+    });
+    box.appendChild(top);box.appendChild(bar);box.appendChild(el('h3','q',q.q));box.appendChild(opts);box.appendChild(fb);box.appendChild(nx);
+  }
+  function pick(n,opts,fb,nx){
+    var q=L[i];if(picks[i]!=null)return;picks[i]=n;
+    var ok=n===q.a;if(ok)score++;scoreEl.textContent='ពិន្ទុ៖ '+score;
+    Array.prototype.forEach.call(opts.children,function(b,k){b.disabled=true;if(k===q.a)b.classList.add('ok');else if(k===n)b.classList.add('no')});
+    fb.className='fb '+(ok?'ok':'no');
+    fb.textContent=(ok?'ត្រឹមត្រូវ! ':'មិនទាន់ត្រូវទេ។ ចម្លើយត្រឹមត្រូវគឺ '+LT[q.a]+'។ ')+q.e;
+    nx.hidden=false;nx.focus();
+  }
+  function end(){
+    box.textContent='';
+    box.appendChild(el('h3',null,'លទ្ធផលរបស់អ្នក'));
+    box.appendChild(el('div','big',score+' / '+L.length));
+    var r=score/L.length;
+    box.appendChild(el('p',null,r>=.85?'ល្អណាស់! អ្នកស្គាល់សញ្ញាព្រមាន។ សូមចែករំលែកទៅមិត្តភក្តិ និងគ្រួសារ។':r>=.5?'ល្អ! សូមអានចម្លើយខាងក្រោម រួចសាកល្បងម្តងទៀត។':'ចាប់ផ្តើមបានល្អ។ សូមអានចម្លើយខាងក្រោម ហើយចងចាំ៖ ឈប់ គិត រួចសួរ។'));
+    var ol=el('ol','rev');
+    L.forEach(function(q,k){
+      var li=el('li'),ok=picks[k]===q.a;
+      li.appendChild(el('b',null,q.q));li.appendChild(el('span',ok?'good':'bad',' '+(ok?'ត្រឹមត្រូវ':'ខុស')));
+      li.appendChild(el('small',null,'ចម្លើយរបស់អ្នក៖ '+LT[picks[k]]+'. '+q.o[picks[k]]));
+      li.appendChild(el('small',null,'ចម្លើយត្រឹមត្រូវ៖ '+LT[q.a]+'. '+q.o[q.a]));
+      li.appendChild(el('small',null,q.e));ol.appendChild(li);
+    });
+    box.appendChild(ol);box.appendChild(btn('ធ្វើម្តងទៀត','primary',start));
+    box.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  start();
+
+  var kl=document.getElementById('keylist'),kb=document.getElementById('keybtn');
+  Q.forEach(function(q,k){
+    var d=el('div');d.appendChild(el('b',null,(k+1)+'. ['+CAT[q.c]+'] '+q.q));
+    d.appendChild(el('p','good','ចម្លើយ៖ '+LT[q.a]+'. '+q.o[q.a]));d.appendChild(el('p','muted',q.e));kl.appendChild(d);
+  });
+  kb.addEventListener('click',function(){
+    var open=kl.hidden;kl.hidden=!open;kb.setAttribute('aria-expanded',open);kb.textContent=open?'លាក់ចម្លើយ':'បង្ហាញចម្លើយ';
+  });
+})();
+</script>
+</body>
+</html>
